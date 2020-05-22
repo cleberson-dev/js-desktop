@@ -4,9 +4,11 @@
   "main": "app.js",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^9.0.0"
+    "electron": "^9.0.0",
+    "electron-reload": "^1.5.0"
   },
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dev": "MODE=dev electron ."
   }
 }

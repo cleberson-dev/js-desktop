@@ -1,13 +1,12 @@
-const { app, BrowserWindow }= require('electron');
+const { app, BrowserWindow } = require('electron');
+
+if (process.env.MODE === 'dev') require('electron-reload')(__dirname);
 
 function createWindow() {
   const window = new BrowserWindow({
     width: 600, height: 480, 
     title: 'Meu App',
-    titleBarStyle: 'hidden',
-    webPreferences: {
-      nodeIntegration: true
-    }
+    webPreferences: { nodeIntegration: true }
   });
 
   window.loadFile('pages/index.html');
