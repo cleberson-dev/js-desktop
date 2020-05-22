@@ -8,10 +8,22 @@ body {
   justify-content: center;
   align-items: center;
   height: 95vh;
+  background-color: #1d3557;
+  
+  -webkit-app-region: drag;
 }
-h1 {
-  text-align: center;
-  color: cornflowerblue;
+
+body, a, p {
+  color: #f1faee;
+}
+
+.title {
+  background-color: #f1faee;
+  color: #1d3557;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: default;
+  margin: 5px;
 }
 
 @keyframes spin {
@@ -24,8 +36,46 @@ h1 {
   cursor: default;
 }
 
-.emoji:hover {
+.title:hover > .emoji {
   animation: spin 2s ease 0s infinite;
 }
 
+p {
+  font-style: italic;
+}
 
+footer {
+  justify-self: flex-start;
+  position: absolute;
+  bottom: 2rem;
+  min-width: 40%;
+}
+
+footer > address {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-style: normal;
+}
+
+.contact-link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.contact-link::after {
+  content: '';
+  display: block;
+  margin-top: 3px;
+  width: 0;
+  height: 3px;
+  background: transparent;
+  transition: width .3s ease;
+}
+
+.contact-link:hover::after {
+  background: #f1faee;
+  width: 100%;
+}
