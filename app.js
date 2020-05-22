@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, globalShortcut } = require('electron');
 
 if (process.env.MODE === 'dev') require('electron-reload')(__dirname);
 
@@ -9,6 +9,12 @@ function createWindow() {
     webPreferences: { nodeIntegration: true }
   });
 
+  if (process.env.MODE === 'dev') {
+    globalShortcut.register('Ctrl+Shift+C', () => {
+      window.webContents.openDevTools({ mode: 'detach' });
+    });
+  }
+  
   window.loadFile('pages/index.html');
 }
 
