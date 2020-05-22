@@ -1,0 +1,31 @@
+:root {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+h1 {
+  text-align: center;
+  color: cornflowerblue;
+}
+
+@keyframes spin {
+  from { transform: rotate(0turn); }
+  to { transform: rotate(1turn); }
+}
+
+.emoji {
+  display: inline-block;
+  cursor: default;
+}
+
+.emoji:hover {
+  animation: spin 2s ease 0s infinite;
+}
+
+

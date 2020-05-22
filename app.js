@@ -1,5 +1,18 @@
 const { app, BrowserWindow }= require('electron');
 
+function createWindow() {
+  const window = new BrowserWindow({
+    width: 600, height: 480, 
+    title: 'Meu App',
+    titleBarStyle: 'hidden',
+    webPreferences: {
+      nodeIntegration: true
+    }
+  });
+
+  window.loadFile('pages/index.html');
+}
+
 app
   .whenReady()
   .then(createWindow);
@@ -18,13 +31,3 @@ app.on('activate', () => {
   createWindow();
 })
 
-function createWindow() {
-  const win = new BrowserWindow({ 
-    width: 600, height: 480, 
-    webPreferences: {
-      nodeIntegration: true
-    }
-  });
-
-  win.loadFile('index.html');
-}
