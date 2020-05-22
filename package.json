@@ -1,0 +1,12 @@
+{
+  "name": "js-desktop",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^9.0.0"
+  },
+  "scripts": {
+    "start": "electron ."
+  }
+}
