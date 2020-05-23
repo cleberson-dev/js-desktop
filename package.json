@@ -1,14 +1,26 @@
 {
   "name": "js-desktop",
   "version": "1.0.0",
+  "description": "Básica aplicação desktop com Electron.js",
+  "author": "Cleberson F R Junior <cleberson.dev@gmail.com> (https://github.com/cleberson-dev)",
   "main": "app.js",
   "license": "MIT",
   "devDependencies": {
     "electron": "^9.0.0",
+    "electron-builder": "^22.6.1",
     "electron-reload": "^1.5.0"
   },
   "scripts": {
     "start": "electron .",
-    "dev": "MODE=dev electron ."
+    "dev": "MODE=dev electron .",
+    "build:linux": "electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.clebersondev.electron-hello",
+    "productName": "Electron Hello",
+    "linux": {
+      "target": "deb",
+      "executableName": "electron-hello"
+    }
   }
 }
