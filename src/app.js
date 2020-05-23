@@ -1,4 +1,5 @@
 const { app, BrowserWindow, globalShortcut } = require('electron');
+const path = require('path');
 
 if (process.env.MODE === 'dev') require('electron-reload')(__dirname);
 
@@ -15,7 +16,7 @@ function createWindow() {
     });
   }
   
-  window.loadFile('pages/index.html');
+  window.loadFile(path.join(__dirname, 'pages', 'index.html'));
 }
 
 app

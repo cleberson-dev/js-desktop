@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Básica aplicação desktop com Electron.js",
   "author": "Cleberson F R Junior <cleberson.dev@gmail.com> (https://github.com/cleberson-dev)",
-  "main": "app.js",
+  "main": "src/app.js",
   "license": "MIT",
   "devDependencies": {
     "electron": "^9.0.0",
