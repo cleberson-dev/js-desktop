@@ -12,6 +12,7 @@
   },
   "scripts": {
     "start": "electron .",
+    "start:server": "node src/server",
     "dev": "MODE=dev electron .",
     "build:linux": "electron-builder --linux"
   },
@@ -22,5 +23,10 @@
       "target": "deb",
       "executableName": "electron-hello"
     }
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "xml2js": "^0.4.23"
   }
 }
