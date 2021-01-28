@@ -6,7 +6,7 @@
   "main": "src/app.js",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^9.0.0",
+    "electron": "^9.4.0",
     "electron-builder": "^22.6.1",
     "electron-reload": "^1.5.0"
   },
